@@ -75,5 +75,5 @@
 
 	}); // End Easypick
 
-})(jQuery);
+})(jQuery); 
 

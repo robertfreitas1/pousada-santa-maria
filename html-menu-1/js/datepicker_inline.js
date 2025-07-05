@@ -43,7 +43,7 @@ $(function() {
         css: [
           'css/daterangepicker_v2.css',
         ],
-        lang: 'en-EN', // Language tags https://www.techonthenet.com/js/language_tags.php
+         lang: 'pt-BR', // Idioma português// Language tags https://www.techonthenet.com/js/language_tags.php
         format: "DD/MM/YYYY",
         calendars: 2,
         grid: 2,
