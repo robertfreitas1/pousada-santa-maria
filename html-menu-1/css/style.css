@@ -2152,7 +2152,7 @@ footer .copy {
 }
 .slide-text small {
   text-transform: uppercase;
-  color: #ebd7b2;
+  color: #111 ;
   letter-spacing: 4px;
   font-weight: 600;
   display: block;
@@ -2326,7 +2326,7 @@ a.box_cat_rooms:hover .background-image {
   color: #fff;
 }
 .box_facilities.white i {
-  color: #ebd7b2;
+  color: #ed5434;
 }
 @media (max-width: 767px) {
   .box_facilities.white {
