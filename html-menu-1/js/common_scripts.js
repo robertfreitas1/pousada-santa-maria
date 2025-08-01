@@ -31789,32 +31789,11 @@ RESIZESENSOR.JS
   ]);
 });
 
-function enviarFormulario2() {
-  const dates = document.getElementById('date_booking2').value.trim();
-  const room = document.getElementById('room_booking').value.trim();
-  const adults = document.getElementById('adults_booking2').value.trim();
-  const childs = document.getElementById('childs_booking2').value.trim();
 
-  if (!dates || !room || adults === "0") {
-    alert('Por favor, preencha as datas, o quarto e ao menos 1 adulto no formulário 2.');
-    return;
-  }
-
-  const message = `*Nova Solicitação de Reserva*\n\n` +
-                  `*Check-in / Check-out:* ${dates}\n` +
-                  `*Quarto:* ${room}\n` +
-                  `*Adultos:* ${adults}\n` +
-                  `*Crianças:* ${childs}`;
-
-  const phone = '5575998487942';
-  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-  window.open(url, '_blank');
-}
 
 $(document).ready(function () {
 
-  // Incremento e decremento para inputs com ids novos
+  // Incremento e decremento - funciona para todos inputs com essas classes
   $('.qtyplus').click(function () {
     let input = $(this).siblings('input.qty');
     let value = parseInt(input.val()) || 0;
@@ -31827,6 +31806,7 @@ $(document).ready(function () {
     if (value > 0) input.val(value - 1);
   });
 
+  // Envio WhatsApp só para formReserva2 (já existe)
   $('#formReserva2').on('submit', function (e) {
     e.preventDefault();
 
@@ -31847,7 +31827,32 @@ $(document).ready(function () {
       `*Adultos:* ${adults}\n` +
       `*Crianças:* ${childs}`;
 
-    var numero = '5575998487942'; // Substitua pelo seu número
+    var numero = '5575998487942';
+    var url = 'https://wa.me/' + numero + '?text=' + encodeURIComponent(texto);
+
+    window.open(url, '_blank');
+  });
+
+  // Exemplo: envio WhatsApp para o formReserva (primeiro formulário)
+  $('#formReserva').on('submit', function (e) {
+    e.preventDefault();
+
+    var dates = $('#dates').val().trim();
+    var adults = $('#adults').val().trim();
+    var childs = $('#childs').val().trim();
+
+    if (!dates || adults === "0") {
+      alert('Por favor, preencha as datas e ao menos 1 adulto.');
+      return;
+    }
+
+    var texto = 
+      `*Nova Solicitação de Pesquisa* \n\n` +
+      `*Check-in / Check-out:* ${dates}\n` +
+      `*Adultos:* ${adults}\n` +
+      `*Crianças:* ${childs}`;
+
+    var numero = '5511999999999'; // Número diferente ou o mesmo, seu critério
     var url = 'https://wa.me/' + numero + '?text=' + encodeURIComponent(texto);
 
     window.open(url, '_blank');
