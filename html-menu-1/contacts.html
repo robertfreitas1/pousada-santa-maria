@@ -234,14 +234,16 @@
                     <div id="newsletter">
                         <h5>Newsletter</h5>
                         <div id="message-newsletter"></div>
-                        <form method="post" action="phpmailer/newsletter_template_email.php" name="newsletter_form"
-                            id="newsletter_form">
-                            <div class="form-group">
-                                <input type="email" name="email_newsletter" id="email_newsletter" class="form-control"
-                                    placeholder="Your email">
-                                <button type="submit" id="submit-newsletter"><i class="bi bi-send"></i></button>
-                            </div>
-                        </form>
+                       <form method="POST"
+    action="https://script.google.com/macros/s/AKfycbz9Ajk8KWXrR_BxPOHk_Luy-drzIjo9WAmIWNp-Dx-OFM9MFwKJwfqrpHD-lPMgxhc0/exec"
+    id="newsletter-form">
+    <div class="form-group">
+      <input type="email" name="fname" placeholder="Digite seu Email" required>
+      <input type="hidden" name="subject" value="Inscrição Newsletter">
+      <input type="hidden" name="horario" id="newsletter-horario">
+      <button type="submit" class="theme-btn btn-submit">Enviar</button>
+    </div>
+  </form>
                         <p>Receive latest offers and promos without spam. You can cancel anytime.</p>
                     </div>
                 </div>
@@ -263,7 +265,7 @@
         </svg>
     </div>
     <!-- /back to top -->
-
+    <script src="js/googlesheets.js"></script>
     <!-- COMMON SCRIPTS -->
     <script src="js/common_scripts.js"></script>
     <script src="js/common_functions.js"></script>
