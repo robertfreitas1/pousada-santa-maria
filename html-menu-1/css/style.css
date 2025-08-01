@@ -83,6 +83,8 @@ Author URI: https://themeforest.net/user/Ansonika/
   border-bottom-color: rgba(255, 255, 255, 0.2);
   border-radius: 100%;
 }
+
+
 @keyframes circle {
   0% {
     transform: rotate(0);
@@ -1988,7 +1990,7 @@ footer .copy {
 .qty-buttons label {
   position: absolute;
   color: #999;
-  left: 15px;
+  left: 9px;
   top: 13px;
   font-weight: 500;
   color: #6c757d;
