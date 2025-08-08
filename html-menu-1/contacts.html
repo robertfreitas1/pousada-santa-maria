@@ -126,54 +126,53 @@
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-7 order-lg-1">
-                    <h3 class="mb-3">Entre em contato</h3>
-                    <div id="message-contact"></div>
-                    <form method="post" action="phpmailer/contact_template_email.php" id="contactform"
-                        autocomplete="off">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-floating mb-4">
-                                    <input class="form-control" type="text" id="name_contact" name="name_contact"
-                                        placeholder="Name">
-                                    <label for="name_contact">Nome</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating mb-4">
-                                    <input class="form-control" type="text" id="lastname_contact"
-                                        name="lastname_contact" placeholder="Last Name">
-                                    <label for="lastname_contact">Sobre nome</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /row -->
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-floating mb-4">
-                                    <input class="form-control" type="email" id="email_contact" name="email_contact"
-                                        placeholder="Email">
-                                    <label for="email_contact">Email</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating mb-4">
-                                    <input class="form-control" type="text" id="phone_contact" name="phone_contact"
-                                        placeholder="Telephone">
-                                    <label for="phone_contact">Telefone</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /row -->
-                        <div class="form-floating mb-4">
-                            <textarea class="form-control" placeholder="Message" id="message_contact"
-                                name="message_contact"></textarea>
-                            <label for="message_contact">Messagem</label>
-                        </div>
+    <h3 class="mb-3">Entre em contato</h3>
+    <div id="message-contact"></div>
 
-                        <p class="mt-3"><input type="submit" value="Enviar" class="btn_1 outline" id="submit-contact">
-                        </p>
-                    </form>
+    <form id="contactform" autocomplete="off">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-floating mb-4">
+                    <input class="form-control" type="text" id="name_contact" name="name_contact" placeholder="Nome">
+                    <label for="name_contact">Nome</label>
                 </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-floating mb-4">
+                    <input class="form-control" type="text" id="lastname_contact" name="lastname_contact" placeholder="Sobrenome">
+                    <label for="lastname_contact">Sobrenome</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-floating mb-4">
+                    <input class="form-control" type="email" id="email_contact" name="email_contact" placeholder="Email">
+                    <label for="email_contact">Email</label>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-floating mb-4">
+                    <input class="form-control" type="text" id="phone_contact" name="phone_contact" placeholder="Telefone">
+                    <label for="phone_contact">Telefone</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-floating mb-4">
+            <textarea class="form-control" placeholder="Mensagem" id="message_contact" name="message_contact"></textarea>
+            <label for="message_contact">Mensagem</label>
+        </div>
+
+        <p class="mt-3">
+            <input type="submit" value="Enviar pelo WhatsApp" class="btn_1 outline" id="submit-contact">
+        </p>
+    </form>
+</div>
+
+
+
             </div>
             <!-- /row -->
         </div>
@@ -297,6 +296,7 @@
         </svg>
     </div>
     <!-- /back to top -->
+     <script src="js/enviarFormularioC"></script>
     <script src="js/googlesheets.js"></script>
     <!-- COMMON SCRIPTS -->
     <script src="js/common_scripts.js"></script>

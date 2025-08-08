@@ -1,0 +1,22 @@
+
+document.getElementById("contactform").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let nome = document.getElementById("name_contact").value;
+    let sobrenome = document.getElementById("lastname_contact").value;
+    let email = document.getElementById("email_contact").value;
+    let telefone = document.getElementById("phone_contact").value;
+    let mensagem = document.getElementById("message_contact").value;
+
+    let texto = `*Nova Solicitação de Reserva*%0A%0A` +
+                `*Nome:* ${nome} ${sobrenome}%0A` +
+                `*Email:* ${email}%0A` +
+                `*Telefone:* ${telefone}%0A` +
+                `*Mensagem:* ${mensagem}`;
+   
+    
+    let numero = "75988827894"; // Coloque aqui o número com DDI e DDD (ex: 55 + DDD + número)
+    
+    let url = `https://wa.me/${numero}?text=${texto}`;
+    window.open(url, "_blank");
+});

@@ -31820,12 +31820,13 @@ $(document).ready(function () {
       return;
     }
 
-    var texto = 
-      `*Nova Solicitação de Reserva* \n\n` +
-      `*Check-in / Check-out:* ${dates}\n` +
-      `*Quarto:* ${room}\n` +
-      `*Adultos:* ${adults}\n` +
-      `*Crianças:* ${childs}`;
+     
+      let texto = `*Nova Solicitação de Reserva*%0A%0A` +
+                `*Nome:* ${nome} ${sobrenome}%0A` +
+                `*Email:* ${email}%0A` +
+                `*Telefone:* ${telefone}%0A` +
+                `*Mensagem:* ${mensagem}`;
+
 
     var numero = '5575998487942';
     var url = 'https://wa.me/' + numero + '?text=' + encodeURIComponent(texto);
