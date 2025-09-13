@@ -299,6 +299,18 @@ a.btn_1.outline:hover,
   color: #fff;
 }
 
+.btn_search {
+    width: 8rem;
+    height: 3rem;
+}
+
+a.btn_search.outline:hover,
+.btn_search.outline:hover {
+    background-color: #4b514d;
+    border: 2px solid transparent;
+    color: #fff;
+}
+
 .btn_4 {
   position: relative;
   display: inline-block;
